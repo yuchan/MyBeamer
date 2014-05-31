@@ -13,5 +13,5 @@ task :open do
 end
 
 task :clean do
-    `rm *.dvi *.log *.nav *.out *.pdf *.snm 2>/dev/null`
+    `rm *.aux *.toc *.dvi *.log *.nav *.out *.pdf *.snm 2>/dev/null`
 end
