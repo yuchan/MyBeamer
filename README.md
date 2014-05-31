@@ -1,0 +1,4 @@
+MyBeamer
+========
+
+My Beamer Template
