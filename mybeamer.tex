@@ -1,17 +1,65 @@
 \documentclass[dvipdfmx,11pt]{beamer}
 \usepackage{pxjahyper}
+\usepackage{graphicx}
 \renewcommand{\kanjifamilydefault}{\gtdefault}
 \usepackage{lmodern}
 \usepackage{minijs}
-\usetheme{AnnArbor}
+\usetheme{CambridgeUS}
+\usecolortheme{seahorse}
 \setbeamertemplate{navigation symbols}{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[
+    currentsubsection,
+    hideothersubsections,
+    sectionstyle=show/hide,
+    subsectionstyle=show/shaded,
+    ] 
+  \end{frame}
+}
 
 \title{presentation}
 \author{yuchan}
 
 \begin{document}
-\begin{frame}\frametitle{}
-\titlepage
+
+\begin{frame}
+  \frametitle{}
+  \titlepage
+\end{frame}
+
+\section*{Table of Contents}
+\begin{frame}
+  \frametitle{Table of Contents}
+  \tableofcontents
+\end{frame}
+
+\section{test}
+\begin{frame}
+\frametitle{test}
+\end{frame}
+
+\section{test2}
+\subsection{testtest2}
+\begin{frame}
+\frametitle{testtest2}
+subsection
+\end{frame}
+\subsection{testtest3}
+\begin{frame}
+\frametitle{testtest3}
+subsection2
 \end{frame}
 
 \end{document}

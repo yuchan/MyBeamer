@@ -1,17 +1,15 @@
-task :hello do
-    puts "hello"
-end
+src = "mybeamer"
 
 task :gen do
     puts "generate pdf..."
-    `platex *.tex`
-    `dvipdfmx *.dvi`
+    `platex #{src}.tex`
+    `dvipdfmx #{src}.dvi`
 end
 
 task :open do
-    `open *.pdf`
+    `open #{src}.pdf`
 end
 
 task :clean do
-    `rm *.aux *.toc *.dvi *.log *.nav *.out *.pdf *.snm 2>/dev/null`
+    `rm #{src}.aux #{src}.toc #{src}.dvi #{src}.log #{src}.nav #{src}.out #{src}.pdf #{src}.snm 2>/dev/null`
 end
